@@ -1,3 +1,6 @@
+Name: Backend API
+URL: https://small-end-to-end-prototype-production.up.railway.app
+
 # Pickabook – Story Illustration Personalisation Prototype
 
 This repository contains a small end‑to‑end prototype for the Pickabook assignment.
