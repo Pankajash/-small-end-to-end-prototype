@@ -46,13 +46,6 @@ Base64 image handling
 
 Basic fetch API calls
 
-📸 Screenshots
-
-(Add your own screenshots in a /screenshots folder and link them here.)
-
-Example:
-
-![Demo Screenshot](screenshots/demo.png)
 
 📝 Features
 
