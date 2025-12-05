@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <title>Pickabook – Character Personaliser</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Simple React setup via CDN for demo purposes -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
     <style>
       * { box-sizing: border-box; }
       body {
@@ -78,7 +80,7 @@
       .status {
         margin-top: 10px;
         font-size: 13px;
-        color: #64748b;
+               color: #64748b;
       }
       .image-frame {
         border-radius: 16px;
@@ -127,11 +129,13 @@
       }
     </style>
   </head>
+
   <body>
     <div id="root"></div>
 
     <script type="text/babel">
-      const API_URL = "http://localhost:8000/api/personalize";
+      /* ✅ UPDATED API URL FOR RAILWAY DEPLOYMENT */
+      const API_URL = "https://small-end-to-end-prototype-production.up.railway.app/api/personalize";
 
       function App() {
         const [file, setFile] = React.useState(null);
@@ -190,8 +194,7 @@
               </div>
               <h1>Story Illustration Personaliser</h1>
               <p className="subtitle">
-                Upload a child&apos;s photo and preview how the illustration is automatically
-                adapted to their face.
+                Upload a child&apos;s photo and preview how the illustration adapts to their face.
               </p>
 
               <div className="grid">
@@ -207,12 +210,8 @@
                     {loading ? "Personalising..." : "Generate Illustration"}
                   </button>
                   <div className="status">
-                    {status || "Backend: FastAPI · Model: Instant-ID style pipeline (mocked)."}
+                    {status || "Backend: FastAPI · Model: Instant-ID style pipeline."}
                   </div>
-                  <p style={{ fontSize: 11, marginTop: 10 }}>
-                    Make sure the FastAPI backend is running on{" "}
-                    <code>localhost:8000</code> before testing.
-                  </p>
                 </div>
 
                 <div className="image-frame">
@@ -226,6 +225,7 @@
                 </div>
               </div>
             </div>
+
             <footer>
               Prototype built for the Pickabook technical assignment – single-user demo only.
             </footer>
